@@ -1,0 +1,11 @@
+image:
+  file: .gitpod.Dockerfile
+
+tasks:
+  - init: >
+      echo "Setting up your environment..." &&
+      asdf plugin-add ruby https://github.com/asdf-vm/asdf-ruby.git &&
+      asdf install ruby 2.7.8 &&
+      asdf global ruby 2.7.8
+  - command: >
+      echo "Ready to test `asdf install ruby 2.7.8`"
